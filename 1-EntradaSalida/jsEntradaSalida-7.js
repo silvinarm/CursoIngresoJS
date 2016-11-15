@@ -2,6 +2,9 @@
 transformarlos a enteros (parseInt),realizar la operación correcta y 
 mostar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
+
+/*El parseInt solo es necesario para la suma porque el + tambien concatena*/
+
 function sumar()
 {	var numeroUno;
 	var numeroDos;
@@ -22,9 +25,7 @@ function restar()
 	var resultado;
 
 	numeroUno = document.getElementById('numeroUno').value;
-	numeroUno = parseInt (numeroUno);
 	numeroDos = document.getElementById ('numeroDos').value;
-	numeroDos = parseInt (numeroDos);
 	resultado = (numeroUno - numeroDos);
 	alert ("la resta es "+resultado);
 	
@@ -36,9 +37,7 @@ function multiplicar()
 	var resultado;
 
 	numeroUno = document.getElementById('numeroUno').value;
-	numeroUno = parseInt (numeroUno);
 	numeroDos = document.getElementById ('numeroDos').value;
-	numeroDos = parseInt (numeroDos);
 	resultado = (numeroUno * numeroDos);
 	alert ("la multiplicacion es "+resultado);
 	
@@ -50,9 +49,7 @@ function dividir()
 	var resultado;
 
 	numeroUno = document.getElementById('numeroUno').value;
-	numeroUno = parseInt (numeroUno);
 	numeroDos = document.getElementById ('numeroDos').value;
-	numeroDos = parseInt (numeroDos);
 	resultado = (numeroUno / numeroDos);
 	alert ("la division es "+resultado);
 	
