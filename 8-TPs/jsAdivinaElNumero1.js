@@ -14,13 +14,35 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 
-		//alert(numeroSecreto );
-	
+		
+	numeroSecreto = Math.floor ((Math.random () *100)+1);
+	//alert(numeroSecreto );
+	console.log ("numero secreto es " + numeroSecreto);
 
 }
 
 function verificar()
-{
+{ 	var numero;
+
+	numero = document.getElementById('numero').value;
+
+	if (numero == numeroSecreto)
+	{
+		alert ("Usted es un ganador!!!");
+	}
+	else
+	{
+		if (numero > numeroSecreto)
+		{
+			alert ("Se pasó del número");
+		}
+		else
+		{
+			alert ("Falta para el número");
+		}
+	}
+
+console.log ("var numero "+numero);
 	
 	
 }
