@@ -8,7 +8,7 @@ secreto del 1 al 100, en la pantalla del juego
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
 var numeroSecreto; 
-var contadorIntentos;
+var contadorIntentos;//se puede expresar aca el valor var contadorIntentos = 0
 
 function comenzar()
 {
@@ -36,7 +36,7 @@ function verificar()
 	}*/
 	contadorIntentos = (contadorIntentos+1)
 	/*contadorIntentos += 1;
-	contadorIntentos++;
+	contadorIntentos++;----- Esta es la manera más utilizada
 	contadorIntentos--;
 	contadorIntentos/=2;*/
 	console.log ("var intentos "+contadorIntentos);
