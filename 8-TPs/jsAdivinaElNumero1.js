@@ -25,10 +25,21 @@ function verificar()
 { 	var numero;
 
 	numero = document.getElementById('numero').value;
+	if (contadorIntentos == null)
+	{
+		contadorIntentos = 0;
+	}
+	else
+	{
+		contadorIntentos = (contadorIntentos);
+	}
+	contadorIntentos = (contadorIntentos+1)
+	console.log ("var intentos "+contadorIntentos);
+	document.getElementById ('intentos').value = contadorIntentos;
 
 	if (numero == numeroSecreto)
 	{
-		alert ("Usted es un ganador!!!");
+		alert ("Usted es un ganador!!! y en sólo "+contadorIntentos+" intentos");
 	}
 	else
 	{
@@ -44,5 +55,6 @@ function verificar()
 
 console.log ("var numero "+numero);
 	
+		
 	
 }
