@@ -9,6 +9,94 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{
+{	var CantidadLamparas;
+	var Marca;
+	var ValorUnitario;
+	var Precio;
+	var PrecioSinImpuesto;
+	var PrecioFinal;
+	var Impuesto;
+
+	CantidadLamparas = document.getElementById('Cantidad').value;
+	Marca = document.getElementById ('Marca').value;
+	
+	ValorUnitario = 35;
+	console.log (CantidadLamparas+" lámparas de la marca "+Marca);
+
+	Precio = (CantidadLamparas*ValorUnitario);
+	console.log ("El precio sin descuento es $"+Precio);
+	if (CantidadLamparas>5)
+	{
+		PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.5);
+	}
+	else
+	{
+		if (CantidadLamparas <3)
+		{
+			PrecioSinImpuesto = (CantidadLamparas*ValorUnitario);
+		}
+		else
+		{
+			if (CantidadLamparas == 5)
+			{
+				if (Marca == 'ArgentinaLuz')
+				{
+					PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.6);
+				}
+				else 
+				{
+					PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.7);
+				}
+			}
+			if (CantidadLamparas == 4)
+			{
+				if (Marca == 'ArgentinaLuz'|| Marca == 'FelipeLamparas' )
+				{
+					PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.75);
+				}	
+				else
+				{
+					PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.8);
+				}
+			}
+			if (CantidadLamparas == 3)
+			{
+				if (Marca == 'ArgentinaLuz')
+				{
+					PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.85);
+				}
+				else 
+				{
+					if (Marca == 'FelipeLamparas')
+					{
+						PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.9);
+					}
+					else
+					{
+						PrecioSinImpuesto = (CantidadLamparas*ValorUnitario*0.95);
+					}
+				}
+
+			}
+
+
+		}
+	}
+	if (PrecioSinImpuesto>=120)
+	{
+		PrecioFinal = (PrecioSinImpuesto*1.10);
+		Impuesto = (PrecioFinal-PrecioSinImpuesto);
+		alert ("IIBB usted pagó "+Impuesto);
+	}
+	else
+	{
+		PrecioFinal = PrecioSinImpuesto;
+	}
+	document.getElementById('precioDescuento').value = PrecioFinal;
+
+
+
+
+
  	
 }
