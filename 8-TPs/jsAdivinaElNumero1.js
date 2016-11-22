@@ -16,6 +16,7 @@ function comenzar()
 	 
 		
 	numeroSecreto = Math.floor ((Math.random () *100)+1);
+	contadorIntentos = 0;
 	//alert(numeroSecreto );
 	console.log ("numero secreto es " + numeroSecreto);
 
@@ -25,15 +26,19 @@ function verificar()
 { 	var numero;
 
 	numero = document.getElementById('numero').value;
-	if (contadorIntentos == null)
+	/*if (contadorIntentos == null)
 	{
 		contadorIntentos = 0;
 	}
 	else
 	{
 		contadorIntentos = (contadorIntentos);
-	}
+	}*/
 	contadorIntentos = (contadorIntentos+1)
+	/*contadorIntentos += 1;
+	contadorIntentos++;
+	contadorIntentos--;
+	contadorIntentos/=2;*/
 	console.log ("var intentos "+contadorIntentos);
 	document.getElementById ('intentos').value = contadorIntentos;
 
